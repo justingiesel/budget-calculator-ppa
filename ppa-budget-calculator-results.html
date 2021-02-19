@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" class="style">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+    <!-- SECTION - RESULTS ---------------------------------------------------------------------------------------------------------------------------->
+       <div class="item">
+            <div class="row header">
+                <div class="col title-group">
+                    <div class="icon"><img src="images/icon-home-pound.svg" alt=""></div>
+                    <div class="title">Your Result</div>
+                </div>
+                <div class="col">
+                    <h2><span class="txt-block-26"><strong>Congratulations John</strong>,</span>you can purchase a Barratt Homes home worth up to:</h2>        
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="row helptobuy">
+                    <div class="col"><img src="images/icon-helptobuy.png" width="40" height="40" alt=""></div>
+                    <div class="col">View  Help to Buy</div>
+                    <div class="col"><img src="images/icon-toggle-off.svg" alt=""></div>
+                </div>
+                <div class="row results">
+                    <div class="col">
+                        <div class="full-amount">
+                            £385,000<span class="txt-norm-block-20 mobile-hide">on your new home*</span>
+                        </div>
+                        <div class="btn-group">
+                            <button class="button btn-white btn-icon btn-icon--med icon-home btn-icon-left mobile-hide">See homes that match your budget</button>
+                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
+                        </div>
+                    </div>
+                    <div class="col"><i class="icon-divider"></i></div>
+                    <div class="col mortgage">
+                        <div class="mortgage-group">
+                            <div class="logo">
+                                <img src="images/logo-mortgage.png" alt="">
+                            </div>
+                            <div class="amount">
+                                <div class="mortgage-amount">
+                                    £725 <span class="txt-norm-14">per month*</span><span class="txt-norm-block-14">Fixed for 2 years</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button class="button btn-white btn-icon btn-icon--med icon-home btn-icon-left desktop-hide mobile-show">See homes that match your budget</button>
+                            <button class="button btn-white btn-icon btn-icon--med icon-handshake btn-icon-left mobile-hide">View more mortgage deals here</button>
+                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-reverse-mobile flex-gap-20">
+                    <div class="col form-phone">
+                        <form action="">
+                            <h3><strong>We've got easy ways to help you move home</strong>,<span class="txt-norm-15"> just enter your telephone number to find out more:</span></h3>
+                            <div class="form-group">
+                                <img src="images/icon-phone.svg" width="29" height="38" alt="">
+                                <input class="input-grey" type="input" placeholder="Telephone number" name="" id="" required>
+                                <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col update-amounts">
+                        <button type="button" id="update-btn" class="collapsible button btn-icon btn-icon--med icon-edit icon-arrow-dark btn-icon-left btn-icon-right">Update your amounts:</button>
+                        <div class="content">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Deposit</strong></p>
+                                        <div class="input-amount">
+                                            <label class="pound">£</label><input type="number" name="deposit" class="number form-control validate[required, custom[integer]]" id="id_deposit" onfocus="this.value=''" min="0" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col align-btm"><button type="submit" class="button btn--med btn-grey">Update</button></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="circle">OR</div>
+                                    </div>
+                                    <div class="col align-btm"><button class="button btn-grey btn-icon btn-icon--small icon-arrow btn-icon-right">Find out more</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex-wrap">
+                    <div class="col"><div class="txt-norm-12">* Please note that the amount shown is only an indication and does not guarantee your borrowing potential and does not constitute financial advice.</div></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SECTION - PROPERTIES ---------------------------------------------------------------------------------------------------------------------------->
+        <div class="item properties">
+            <div class="row header">
+                <div class="col title-group">
+                    <div class="icon"><img src="images/icon-home-pound.svg" alt=""></div>
+                    <div class="title">Your Result</div>
+                </div>
+                <div class="col">
+                    <h2>These are the homes that match your budget and location from <strong>Barratt Homes</strong> at <strong>Millhill Quarter</strong></h2>        
+                </div>
+                <div class="col brand">
+                    <img src="images/logo-barrat.jpg" width="176" alt="">      
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="row prop">
+                    <div class="col">
+                        <img src="images/prop.jpg" width="253" height="155" alt="">
+                        <div class="details">
+                            <div class="name">Property Name</div>
+                            <div class="beds">x 3</div>
+                            <div class="address">Hackbridge Road, Wallington, SM6 7DY</div>
+                            <div class="amount">£385,000</div>
+                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Request Details</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/prop.jpg" width="253" height="155" alt="">
+                        <div class="details">
+                            <div class="name">Property Name</div>
+                            <div class="beds">x 3</div>
+                            <div class="address">Hackbridge Road, Wallington, SM6 7DY</div>
+                            <div class="amount">£385,000</div>
+                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Request Details</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/prop.jpg" width="253" height="155" alt="">
+                        <div class="details">
+                            <div class="name">Property Name</div>
+                            <div class="beds">x 3</div>
+                            <div class="address">Hackbridge Road, Wallington, SM6 7DY</div>
+                            <div class="amount">£385,000</div>
+                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Request Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col form-phone">
+                <form action="">
+                    <div class="form-wrapper">
+                        <h3>John, don't miss out on <strong>exclusive instant updates and discounts</strong> for these properties</h3>
+                        <label>Telephone Number:</label>
+                        <div class="form-group">
+                            <input class="input-white" type="input" placeholder="Telephone number" name="" id="" required>
+                            <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="wrapper">
+                <div class="row prop">
+                    <div class="col">
+                        <img src="images/prop.jpg" width="253" height="155" alt="">
+                        <div class="details">
+                            <div class="name">Property Name</div>
+                            <div class="beds">x 3</div>
+                            <div class="address">Hackbridge Road, Wallington, SM6 7DY</div>
+                            <div class="amount">£385,000</div>
+                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Request Details</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/prop.jpg" width="253" height="155" alt="">
+                        <div class="details">
+                            <div class="name">Property Name</div>
+                            <div class="beds">x 3</div>
+                            <div class="address">Hackbridge Road, Wallington, SM6 7DY</div>
+                            <div class="amount">£385,000</div>
+                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Request Details</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/prop.jpg" width="253" height="155" alt="">
+                        <div class="details">
+                            <div class="name">Property Name</div>
+                            <div class="beds">x 3</div>
+                            <div class="address">Hackbridge Road, Wallington, SM6 7DY</div>
+                            <div class="amount">£385,000</div>
+                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Request Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item info">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col">
+                        <img src="images/pdf.jpg" alt="">
+                        <a href="#" title="" ><div class="icon"><img src="images/icon-download.svg" alt=""></div>
+                            <span>Download a brochure for for New Mill Quarter</span>
+                            <i class="arrow"></i>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <img src="images/pdf.jpg" alt="">
+                        <a href="#" title="" ><div class="icon"><img src="images/icon-download.svg" alt=""></div>
+                            <span>Download a brochure for New Mill Quarter</span>
+                            <i class="arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item mortgage">
+            <div class="row header">
+                <div class="col title-group">
+                    <div class="icon"><img src="images/icon-home-pound.svg" alt=""></div>
+                    <div class="title">Your Result</div>
+                </div>
+                <div class="col">
+                    <h2><span class="txt-block-26">Today's top mortgage deals for you</h2>        
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col">
+                        <h2><span class="txt-block-26">Without Help to Buy</h2>        
+                    </div>
+                    <div class="col">
+                        <h2><span class="txt-block-26">With Help to Buy</h2>        
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper add-bg-color">
+                <div class="row">
+                    <div class="col">
+                        <div class="title"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
+                        <div class="details">
+                            <img src="images/logo-mortgage.png">
+                            <ul>
+                                <li>Then £1,437 for remaining term</li>
+                                <li>Total amount £338,888 payable over 20 year term</li>
+                                <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
+                            </ul>
+                        </div>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Enquire</button>
+                    </div>
+                    <div class="col help-to-buy">
+                        <div>£725 p/m*       |       Fixed for 2 years</div>
+                        <div class="group">
+                            <img src="images/logo-mortgage.png">
+                            <ul>
+                                <li>Then £1,437 for remaining term</li>
+                                <li>Total amount £338,888 payable over 20 year term</li>
+                                <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
+                            </ul>
+                        </div>
+                        <button class="button btn-blue btn--med icon-arrow btn-right">Enquire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">Item</div>
+    </div>
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+    </script>
+</body>
+</html>

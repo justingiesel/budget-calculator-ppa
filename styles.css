@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'Omnes';
+    src: url('fonts/Omnes.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Omnes';
+    src: url('fonts/Omnes Semibold Regular.ttf') format('truetype');
+    font-weight: bold;
+}
+:root {
+    --dark: #41444B;
+    --lightgrey: #EBEBEB;
+    --darkgrey: #686B70;
+    --white: #ffffff;
+    --blue: #2089C5;
+    --darkblue: #1C7CAE;
+}
+.desktop-hide { display: none !important; }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+body { 
+    background-color: #F5F5F5; 
+    color: var(--dark); 
+    font-family: 'Omnes', Arial, Helvetica, sans-serif;
+}
+h2 { font-size: 20px; line-height: 26px; margin-bottom: 0; font-weight: normal; margin-top: 20px; }
+h3 { font-size: 19px; line-height: 21px; margin-bottom: 15px; font-weight: normal; }
+a { text-decoration: none; color: var(--dark); }
+.flex-wrap { flex-flow: wrap; }
+.flex-nowrap { flex-flow: nowrap; }
+.flex-gap-20 { gap: 20px;}
+.align-btm { align-self: flex-end ; }
+.txt-shrink-14 { font-size: 14px; font-weight: normal;}
+.txt-norm-20 { font-size: 20px; font-weight: normal;}
+.txt-norm-16 { font-size: 16px; font-weight: normal; }
+.txt-norm-15 { font-size: 15px; font-weight: normal; }
+.txt-norm-14 { font-size: 14px; font-weight: normal; }
+.txt-norm-12 { font-size: 12px; font-weight: normal; }
+.txt-block-26 { font-size: 26px; display: block;}
+.txt-norm-block-20 { font-size: 20px; font-weight: normal; display: block;}
+.txt-norm-block-14 { font-size: 14px; font-weight: normal; display: block;}
+.container { 
+    display: grid; 
+    margin: 0 auto;
+    max-width: 100%;
+    max-width: 880px; 
+    width: 100%; 
+    grid-row-gap: 40px;
+}
+.item { position: relative; background-color: white; display: flex; flex-flow: column; gap: 15px; }
+.item .wrapper { padding: 0 40px 40px; display: grid; }
+.item .wrapper .row { margin-bottom: 20px; position: relative; display: flex; }
+.item .wrapper .row:first-of-type, .item .wrapper .row:last-of-type { margin-bottom: 0; }
+.item .row, .item .wrapper .row{ display: flex; }
+/* .item .col, .item .wrapper .col { background-color: lightseagreen; }
+.item .row, .item .wrapper .row{ background-color: lightcoral; } */
+
+/*-- BUTTONS ------------------------------------------------ */
+.button {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    font-size: 12px;
+}
+.btn-med { padding: 12px; font-size: 14px;}
+.btn-white { background-color: white; color: var(--dark); border: 1px solid var(--darkgrey); }
+.btn-blue { background-color: var(--blue); color: var(--white); border: none; }
+.btn-darkblue { background-color: var(--darkblue); color: var(--white); border: none; }
+.btn-grey { background-color: var(--darkgrey); color: var(--white); border: none; }
+.btn-icon::before, .btn-icon::after { 
+    content: "";
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+}
+.btn-icon--small::before{ background-size: 10px; width: 12px; height: 12px; }
+.btn-icon--med::before, .btn-icon--med::after{ background-size: 18px; width: 20px; height: 20px; }
+.btn-icon--large::before{ background-size: 38px; width: 40px; height: 40px; }
+
+.icon-home::before{ filter: invert() opacity(0.7); background-image: url('images/icon-home.svg'); }
+.icon-handshake::before{ filter: invert() opacity(0.7); background-image: url('images/icon-handshake.svg'); }
+.icon-arrow::before{ filter: brightness(100%); background-image: url('images/icon-arrow.svg'); }
+.icon-arrow-dark::after{ background-image: url('images/icon-arrow.svg'); }    
+
+.btn-icon-left{ padding: 10px 11px 10px 38px; }
+.btn-icon-right{ padding: 10px 28px 10px 11px;}
+.btn-icon-left::before{ top: 8px; left: 15px; }
+.btn-icon-right::before{ top: 12px; right: 10px;transform: rotate(270deg); 
+    /* All browsers support */
+    -moz-transform: rotate(270deg); 
+    -webkit-transform: rotate(270deg); 
+    -o-transform: rotate(270deg); 
+    -ms-transform: rotate(270deg); 
+}
+
+/*-- FORM inputS ------------------------------------------------ */
+.form-phone input.input-grey { border: 1px solid #DCDCDC; border-radius: 4px; background-color: #F6F6F6; width: 100%; padding: 10px 20px; }
+.form-phone input.input-white { border: 1px solid #DCDCDC; border-radius: 4px; background-color: white; width: 100%; padding: 10px 20px; }
+
+/*-- HEADER ------------------------------------------------ */
+.item .header .col .icon { 
+    display: flex;
+    justify-content: center;
+    background: var(--dark);
+    width: 84px;
+    height: 84px;
+    border-radius: 0 0 8px 0;
+}
+.item .header .col .title { display: none; }
+.item .header .col.title-group img { width: 36px; }
+.item .header h2 { padding-left: 30px; }
+
+/*-- HELPtoBUY ------------------------------------------------ */
+.row.helptobuy { justify-content: flex-end; }
+.row.helptobuy .col { padding: 5px 5px; align-self: center; }
+
+/*-- RESULTS ------------------------------------------------ */
+.results { align-items:flex-end; }
+.results .col{ display: block; width: 100%; font-weight: bold; }
+.results .col:first-of-type { font-size: 50px; line-height: 40px; }
+.results .col:nth-of-type(2) { width: 70px; padding: 0 20px; }
+.results .col:nth-of-type(2) .icon-divider { display: block; width: 35px; height: 88px; background-image: url('images/icon-divider-vert.svg');}
+.results .col:last-of-type { font-size: 35px; line-height: 30px; }
+.results .col.mortgage { display: inline-block; }
+.results .col .mortgage-group { display: inline-flex; }
+.results .col .mortgage-group .logo img{ width: 100%; max-width: 60px;}
+.results .col .mortgage-group .amount { margin-left: 30px;}
+.results .col .btn-group{ display: flex; justify-content: space-between; margin-top: 10px; }
+.col.form-phone { width: 60%; }
+.col.form-phone .button { width: 100%; }
+
+/*-- FORM - Telephone ------------------------------------------------ */
+.form-phone form { display: block; padding: 25px; box-sizing: border-box; border: 1px solid var(--lightgrey); border-radius: 10px;width: 100%; }
+.form-phone h3 span.txt-shrink { font-size: 90%; font-weight: normal; }
+.form-phone h3 { margin-top: 0; }
+.form-phone .form-group { display: inline-flex; gap: 10px; vertical-align: top; width: 100%; }
+
+/*-- UPDATE AMOUNTS ------------------------------------------------ */
+.update-amounts .row { justify-content: space-between; }
+.update-amounts .col { margin: 8px; }
+.update-amounts .collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px 50px !important;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.update-amounts .active, .update-amounts .collapsible:hover { background-color: #ccc; } 
+/* .update-amounts .active .content{ padding: 0 20px 20px !important; background-color: red;} */
+.update-amounts button.collapsible::before{ background-image: url('images/icon-edit.svg'); top: 16px; left: 15px; }
+.update-amounts button.collapsible::after{ filter: brightness(0);top: 22px; right: 15px; }
+.update-amounts .content {  
+    padding: 0;
+    background-color: #F7F7F7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; }
+.update-amounts .content p { margin-bottom: 0;}
+.update-amounts .content form { padding: 0 20px 20px;}
+.update-amounts .input-amount .pound {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+    height: 41px;
+    line-height: 39px;
+    padding: 8px 12px;
+    border: 0;
+    border-right: 1px solid #ccc;
+    border-radius: 3px 0px 0px 3px;
+    display: inline;
+    background: #ffffff;
+    font-weight: bold;
+}
+.update-amounts label { font-weight: bold;}
+.update-amounts .input-amount .number {
+    margin: 0;
+    height: 36px;
+    font-size: 15px;
+    line-height: 36px;
+    padding: 6px 12px;
+    width: 100px;
+    border: 0;
+    box-shadow: none;
+    background: #ffffff;
+
+    border-radius: 0px 3px 3px 0px;
+    display: inline;
+}
+.update-amounts .circle { width: 34px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 50%;border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center; 
+    font-weight: bold;
+    background-color: white ;
+}
+
+/*-- PROPERTIES ------------------------------------------------ */
+.properties .header { margin-bottom: 30px;}
+.properties .wrapper .row { justify-content: space-between; }
+/* .properties .prop img.logo { max-wid} */
+.properties .prop .details { position: relative; gap: 5px; display: flex; flex-flow: column; }
+.properties .prop .button { width: 100%; text-align: left; }
+.properties .prop .name { font-size: 15px; width: 80%; margin-bottom: 5px; }
+.properties .prop .address { font-size: 12px;}
+.properties .prop .amount { font-size: 23px; font-weight: bold;  }
+.properties .prop .beds { position: absolute; top: 0; right: 0; font-size: 14px; padding-left: 13px;}
+.properties .prop .beds::before { background-image: url('images/icon-bed.svg'); content: ""; width: 24px; height: 16px; display: inline-block; margin-right: 5px; }
+.properties .prop .brand img { width: 100%; max-width: 176px; height: 100%; max-height: 195px; }
+.properties .col.brand { width: 30%; text-align: right; }
+.properties .form-phone { margin-bottom: 40px;}
+.properties .form-phone form { margin: 0 auto; width: 75%; border: none; background-color: #F5F5F5; padding: 30px 50px 40px 80px; position: relative;}
+.properties .form-phone form::before { content: ""; position: absolute; left:-23px; top: -18px; display: block; background-image: url('images/icon-check-lg.svg'); width: 110px; height:85px; background-repeat: no-repeat; background-size: 110px; }
+.properties .col.form-phone { width: 100%; }
+.properties .col.form-phone label { display: block; font-size: 14px; }
+.properties .form-phone .form-group { width: 100%; }
+.properties h3 { font-size: 26px; line-height: 30px; }
+
+/*-- INFO ------------------------------------------------ */
+.info { padding-top: 40px; }
+.info .row { justify-content: space-between; gap: 20px; }
+.info .col { width: 47%; }
+.info a { display: flex; gap: 10px; font-size: 18px; margin-top: 10px; }
+.info a span { padding: 5px 15px; align-self: center;} 
+.info img { max-width: 373px; width: 100%; border: 1px solid var(--lightgrey); padding: 5px; }
+.info a img { border: none; padding: 0;}
+.info .col a .icon { width: 56px; height: 56px; padding: 10px; }
+.info a i.arrow { display: block; background-image: url('images/icon-arrow.svg'); background-repeat: no-repeat; background-size:27px; filter: invert();  
+    width: 50px; height: 25px;align-self: center;
+    rotate: (180deg);
+    /* All browsers support */
+    -moz-transform: rotate(270deg); 
+    -webkit-transform: rotate(270deg); 
+    -o-transform: rotate(270deg); 
+    -ms-transform: rotate(270deg); 
+}
+
+/*-- MORTGAGE ------------------------------------------------ */
+.mortgage .wrapper { padding: 30px 40px 20px 40px; }
+.mortgage .wrapper.add-bg-color { background-color: #F8F8F8; }
+.mortgage .wrapper .row { gap: 30px; }
+.mortgage .wrapper .row:first-of-type .col { width:49%; }
+.mortgage .title { margin-bottom: 10px; }
+.mortgage .title span.amount { font-size: 30px; font-weight: bold; }
+.mortgage .title span.spacer { display: inline; margin: 0 30px; border-right: 1px solid var(--darkgrey);}
+.mortgage ul { list-style-type: circle; list-style-image: url(' '); list-style-position: outside; margin-left: 25px; font-size: 12px; } 
+.mortgage li { padding: 4px 2px; } 
+.mortgage .details { display: flex; }
+.mortgage .details img { width: 100%; max-width: 100px; height: auto; }
+.mortgage button { float: right; }
+
+/* ------------------------------------------------------------------------------------------------ */
+/* MEDIA QUERIES - Mobile */
+/* ------------------------------------------------------------------------------------------------ */
+@media only screen and (max-width: 600px){
+    .mobile-hide { display: none !important; }
+    .mobile-show { display: block !important; }
+    .row.col-reverse-mobile{ flex-direction: column-reverse !important; }
+    .container { padding:0; }
+    .container .wrapper{ padding: 10px 20px 30px; }
+    .item .row { flex-flow: column; }
+    .item .col .title { margin: 0 auto; padding-right: 15%; }
+    .button { width: 100%; }
+
+    /*-- HEADER ------------------------------------------------ */
+    .item .col .icon {
+        width: auto; 
+        height: 22px; }
+    .item .col.title-group { 
+        display: flex; 
+        background: var(--dark); 
+        align-items: center;        /* justify-content: center; */
+        padding: 12px 20px;
+    }
+    .item .col .title { display: inline-flex; color: white;justify-content: center; }
+
+    /*-- HELPtoBUY ------------------------------------------------ */
+    .item .row.helptobuy { flex-direction: row; justify-content: center; }
+    .item h2 { font-size: 18px; text-align: center; padding: 10px 25px; }
+    
+    /*-- RESULTS ------------------------------------------------ */
+    .results { gap: 15px;}
+    .item h2 span { font-size: 20px; font-weight: normal; line-height: 18px; }
+    .full-amount{ text-align: center; }
+    .results .btn-group { justify-content: center; }
+    .results .col:nth-of-type(2) { width: auto; margin: 0 auto; }
+    .results .col:nth-of-type(2) .icon-divider { display: block; width: 135px; height: 35px; background-image: url('images/icon-divider-hori.svg'); }
+    .col.mortgage { text-align: -moz-center; }
+    .results .button.icon-home { background-color: var(--blue); color: white; }
+    .results .button.icon-home::before { filter: opacity(1);}
+    .col.form-phone { width: 60%; }
+
+    /*-- FORM Telephone ------------------------------------------------ */
+    .form-phone .form-group { display: inline-block; }
+    .form-phone .form-group:first-of-type { width: 13%; }
+    .form-phone .form-group:last-of-type { width: 85%;}
+    .form-phone input { width: 100%; margin-bottom: 5px; }
+    
+    /*-- UPDATE AMOUNTS ------------------------------------------------ */
+    .update-amounts .row { flex-flow: row; }
+
+    /*-- PROPERTIES ------------------------------------------------ */
+    .properties .col.brand {display: none; }
+    .properties .prop img { width: 100%; height: 100%; max-height: 195px; }
+    .properties .row.prop { gap: 30px; }
+    .properties h3 { font-size: 18px; line-height: 22px; text-align: center; }
+    .properties .form-phone form { width: 100%; border-radius: 0; padding: 50px 40px 40px; }
+    .properties .form-phone form label { display: none !important; }
+    .properties .form-phone .form-group:last-of-type { width: 100%; }
+    .properties .form-phone form::before { left: 40%; top: -21px; width: 90px; height: 69px; background-size: 78px; }
+
+    /*-- INFO ------------------------------------------------ */
+    .info .col { width: 100%; }
+
+    /*-- MORTGAGE ------------------------------------------------ */
+    /* .mortgage { background-color: red !important;}
+    .mortgage ul { list-style-type: circle; list-style-image: url(' '); list-style-position: inside; } 
+    .mortgage li { padding: 2px; margin: 0px; }   */
+
+}
+
