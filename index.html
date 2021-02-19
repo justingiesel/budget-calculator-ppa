@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container">
-    <!-- SECTION - RESULTS ---------------------------------------------------------------------------------------------------------------------------->
-       <div class="item">
+    <!-- SECTION - MAIN RESULTS ---------------------------------------------------------------------------------------------------------------------------->
+       <div class="item main">
             <div class="row header">
                 <div class="col title-group">
                     <div class="icon"><img src="images/icon-home-pound.svg" alt=""></div>
@@ -19,21 +19,30 @@
                 <div class="col">
                     <h2><span class="txt-block-26"><strong>Congratulations John</strong>,</span>you can purchase a Barratt Homes home worth up to:</h2>        
                 </div>
+                <div class="col mobile-hide">
+                    <a href="#" class="toggle-helptobuy">
+                        <img src="images/icon-helptobuy.png" width="40" height="40" alt="">
+                        <span>View Help to Buy</span>
+                        <i class="btn-toggle icon-toggle-off"></i>
+                    </a>
+                </div>
             </div>
             <div class="wrapper">
-                <div class="row helptobuy">
-                    <div class="col"><img src="images/icon-helptobuy.png" width="40" height="40" alt=""></div>
-                    <div class="col">View  Help to Buy</div>
-                    <div class="col"><img src="images/icon-toggle-off.svg" alt=""></div>
-                </div>
                 <div class="row results">
-                    <div class="col">
-                        <div class="full-amount">
+                    <div class="col full-amount">
+                        <div>
                             £385,000<span class="txt-norm-block-20 mobile-hide">on your new home*</span>
                         </div>
-                        <div class="btn-group">
-                            <button class="button btn-white btn-icon btn-icon--med icon-home btn-icon-left mobile-hide">See homes that match your budget</button>
-                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
+                        <div class="desktop-hide mobile-show">
+                            <a href="#" class="toggle-helptobuy">
+                                <img src="images/icon-helptobuy.png" width="40" height="40" alt="">
+                                <span>View Help to Buy</span>
+                                <i class="btn-toggle icon-toggle-off"></i>
+                            </a>
+                        </div>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
+                        <div class="btn-group mobile-hide">
+                            <button class="button btn-white btn-icon btn-icon--med icon-home btn-icon-left">See homes that match your budget</button>
                         </div>
                     </div>
                     <div class="col"><i class="icon-divider"></i></div>
@@ -44,14 +53,14 @@
                             </div>
                             <div class="amount">
                                 <div class="mortgage-amount">
-                                    £725 <span class="txt-norm-14">per month*</span><span class="txt-norm-block-14">Fixed for 2 years</span>
+                                    £725 <span class="txt-norm-14">p/month*</span><span class="txt-norm-block-14">Fixed for 2 years</span>
                                 </div>
                             </div>
                         </div>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
                         <div class="btn-group">
                             <button class="button btn-white btn-icon btn-icon--med icon-home btn-icon-left desktop-hide mobile-show">See homes that match your budget</button>
                             <button class="button btn-white btn-icon btn-icon--med icon-handshake btn-icon-left mobile-hide">View more mortgage deals here</button>
-                            <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
                         </div>
                     </div>
                 </div>
@@ -59,8 +68,8 @@
                     <div class="col form-phone">
                         <form action="">
                             <h3><strong>We've got easy ways to help you move home</strong>,<span class="txt-norm-15"> just enter your telephone number to find out more:</span></h3>
+                            <img src="images/icon-phone.svg" width="31" height="42" alt="">
                             <div class="form-group">
-                                <img src="images/icon-phone.svg" width="29" height="38" alt="">
                                 <input class="input-grey" type="input" placeholder="Telephone number" name="" id="" required>
                                 <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
                             </div>
@@ -72,7 +81,7 @@
                             <form action="">
                                 <div class="row">
                                     <div class="col">
-                                        <p><strong>Deposit</strong></p>
+                                        <p class="txt-norm-15">Deposit</p>
                                         <div class="input-amount">
                                             <label class="pound">£</label><input type="number" name="deposit" class="number form-control validate[required, custom[integer]]" id="id_deposit" onfocus="this.value=''" min="0" value="0">
                                         </div>
@@ -99,7 +108,7 @@
         <div class="item properties">
             <div class="row header">
                 <div class="col title-group">
-                    <div class="icon"><img src="images/icon-home-pound.svg" alt=""></div>
+                    <div class="icon"><img src="images/icon-home.svg" alt=""></div>
                     <div class="title">Your Result</div>
                 </div>
                 <div class="col">
@@ -191,6 +200,7 @@
                 </div>
             </div>
         </div>
+        <!-- SECTION - INFO ---------------------------------------------------------------------------------------------------------------------------->
         <div class="item info">
             <div class="wrapper">
                 <div class="row">
@@ -203,38 +213,39 @@
                     </div>
                     <div class="col">
                         <img src="images/pdf.jpg" alt="">
-                        <a href="#" title="" ><div class="icon"><img src="images/icon-download.svg" alt=""></div>
-                            <span>Download a brochure for New Mill Quarter</span>
+                        <a href="#" title="" ><div class="icon"><img src="images/icon-chat.svg" alt=""></div>
+                            <span><strong>Any questions?</strong> Speak to the Barratt Homes team</span>
                             <i class="arrow"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- SECTION - MORTGAGE ---------------------------------------------------------------------------------------------------------------------------->
         <div class="item mortgage">
             <div class="row header">
                 <div class="col title-group">
-                    <div class="icon"><img src="images/icon-home-pound.svg" alt=""></div>
-                    <div class="title">Your Result</div>
+                    <div class="icon"><img src="images/icon-handshake.svg" alt=""></div>
+                    <div class="title">Top Mortgage Deals for you</div>
                 </div>
-                <div class="col">
+                <div class="col mobile-hide">
                     <h2><span class="txt-block-26">Today's top mortgage deals for you</h2>        
                 </div>
             </div>
-            <div class="wrapper">
+            <div class="wrapper no-vert-pad">
                 <div class="row">
                     <div class="col">
                         <h2><span class="txt-block-26">Without Help to Buy</h2>        
                     </div>
                     <div class="col">
-                        <h2><span class="txt-block-26">With Help to Buy</h2>        
+                        <h2><span class="txt-block-26 txt-green"><strong>With Help to Buy</strong></h2>        
                     </div>
                 </div>
             </div>
             <div class="wrapper add-bg-color">
                 <div class="row">
                     <div class="col">
-                        <div class="title"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
+                        <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
                         <div class="details">
                             <img src="images/logo-mortgage.png">
                             <ul>
@@ -245,9 +256,25 @@
                         </div>
                         <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Enquire</button>
                     </div>
-                    <div class="col help-to-buy">
-                        <div>£725 p/m*       |       Fixed for 2 years</div>
-                        <div class="group">
+                    <div class="col helptobuy">
+                        <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
+                        <div class="details">
+                            <img src="images/icon-helptobuy.png">
+                            <ul>
+                                <li>Then £1,437 for remaining term</li>
+                                <li>Total amount £338,888 payable over 20 year term</li>
+                                <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
+                            </ul>
+                        </div>
+                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Enquire</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col">
+                        <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
+                        <div class="details">
                             <img src="images/logo-mortgage.png">
                             <ul>
                                 <li>Then £1,437 for remaining term</li>
@@ -255,12 +282,82 @@
                                 <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
                             </ul>
                         </div>
-                        <button class="button btn-blue btn--med icon-arrow btn-right">Enquire</button>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Enquire</button>
+                    </div>
+                    <div class="col helptobuy">
+                        <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
+                        <div class="details">
+                            <img src="images/icon-helptobuy.png">
+                            <ul>
+                                <li>Then £1,437 for remaining term</li>
+                                <li>Total amount £338,888 payable over 20 year term</li>
+                                <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
+                            </ul>
+                        </div>
+                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Enquire</button>
                     </div>
                 </div>
             </div>
+            <div class="wrapper add-bg-color">
+                <div class="row">
+                    <div class="col">
+                        <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
+                        <div class="details">
+                            <img src="images/logo-mortgage.png">
+                            <ul>
+                                <li>Then £1,437 for remaining term</li>
+                                <li>Total amount £338,888 payable over 20 year term</li>
+                                <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
+                            </ul>
+                        </div>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Enquire</button>
+                    </div>
+                    <div class="col helptobuy">
+                        <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
+                        <div class="details">
+                            <img src="images/icon-helptobuy.png">
+                            <ul>
+                                <li>Then £1,437 for remaining term</li>
+                                <li>Total amount £338,888 payable over 20 year term</li>
+                                <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
+                            </ul>
+                        </div>
+                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Enquire</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="row flex-wrap">
+                    <div class="col"><div class="txt-norm-12">* Please note that the amount shown is only an indication and does not guarantee your borrowing potential and does not constitute financial advice.</div></div>
+                </div>
+            </div>
         </div>
-        <div class="item">Item</div>
+        <!-- SECTION - EXCLUSIVE ---------------------------------------------------------------------------------------------------------------------------->
+        <div class="item exclusive">
+            <div class="row header">
+                <div class="col title-group">
+                    <div class="icon"><img src="images/icon-check.svg" alt=""></div>
+                    <div class="title">Your Result</div>
+                </div>
+                <div class="col">
+                    <h2><span class="txt-block-26"><strong>John, don't miss out on <i>exclusive</i> instant updates and discounts for these properties</strong></h2>        
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="row helptobuy">
+                    <div class="col form-phone">
+                        <form action="">
+                            <h3>Enter your telephone number to find out more:</h3>
+                            <img src="images/icon-phone.svg" width="32" height="42" alt="">
+                            <div class="form-group">
+                                <input class="input-grey" type="input" placeholder="Telephone number" name="" id="" required>
+                                <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>    
+        </div>
     </div>
     <script>
 var coll = document.getElementsByClassName("collapsible");
