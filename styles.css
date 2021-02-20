@@ -39,7 +39,8 @@ img { width: 100%; }
 .txt-norm-block-14 { font-size: 14px; font-weight: normal; display: block;}
 .txt-green { color: var(--green); }
 .container { display: grid; margin: 0 auto; max-width: 100%; max-width: 880px; width: 100%; grid-row-gap: 40px; }
-.item { position: relative; background-color: white; display: flex; flex-flow: column; gap: 15px; }
+.item { position: relative; background-color: white; display: flex; flex-flow: column; gap: 15px; -webkit-box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.1); 
+box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.1);}
 .item .wrapper { padding: 0 45px 45px; display: grid; }
 .item .wrapper .row { margin-bottom: 20px; position: relative; display: flex; justify-content: space-between; }
 .item .row, .item .wrapper .row{ display: flex; }
@@ -57,6 +58,7 @@ img { width: 100%; }
     position: relative;
     font-size: 12px;
 }
+.button:hover { opacity: 0.8; }
 .btn-med { padding: 12px; font-size: 14px;}
 .btn-white { background-color: white; color: var(--dark); border: 1px solid var(--grey); }
 .btn-blue { background-color: var(--blue); color: var(--white); border: none; }
@@ -98,13 +100,14 @@ form input::placeholder { color: var(--darkgrey);}
 .toggle-helptobuy { display: flex; align-items: center; position: absolute; right: 40px; top: 20px; }
 .toggle-helptobuy span { padding: 0 10px 0 10px; }
 .btn-toggle { display: block; width: 40px; height: 22px;  }
-.icon-toggle-off{ background: url('images/icon-toggle-off.svg') no-repeat; background-size: 40px; }
-.icon-toggle-on{ background: url('images/icon-toggle-on.svg') no-repeat ; background-size: 40px; }
+.icon-toggle{ background: url('images/icon-toggle-off.svg') no-repeat; background-size: 40px; }
+.icon-toggle.active{ background: url('images/icon-toggle-on.svg') no-repeat ; background-size: 40px; }
 
 /*-- MAIN - Results ------------------------------------------------ */
 .main .row { margin-bottom: 20px;}
 .main img { width: auto; }
 .results { align-items:flex-end; }
+.results.main.hidden { display: none !important; }
 .results .col{ display: block; width: 100%; font-weight: bold; }
 .results .col:first-of-type { font-size: 44px; line-height: 40px; }
 .results .col:nth-of-type(2) { width: 70px; padding: 0 20px; }
@@ -119,6 +122,11 @@ form input::placeholder { color: var(--darkgrey);}
 .results .col .btn-group{ display: flex;margin-top: 10px; }
 .col.form-phone { width: 60%; }
 .col.form-phone .button { width: 100%; }
+
+.results.help-to-buy { display: none !important; }
+.results.help-to-buy.active { display: flex !important; }
+.results.help-to-buy { color: var(--green);}
+.results .btn-helptobuy { background-color: var(--green) !important; }
 
 /*-- MAIN - Form-phone ------------------------------------------------ */
 .form-phone form { display: block; padding: 25px; box-sizing: border-box; border: 1px solid var(--lightgrey); border-radius: 10px;width: 100%; }
@@ -202,9 +210,11 @@ form input::placeholder { color: var(--darkgrey);}
 .mortgage .helptobuy .amount { color: var(--green) }
 
 /*-- EXCLUSIVE ------------------------------------------------ */
+.exclusive .header { margin-bottom: 20px; }
 .exclusive .col.form-phone { margin: 0 auto; width: 80%; }
 .exclusive .col.form-phone form { border: none; padding: 0; }
 .exclusive img { width: auto; }
+.terms { font-size: 12px; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* MEDIA QUERIES - Mobile */
@@ -227,7 +237,7 @@ form input::placeholder { color: var(--darkgrey);}
     /*-- HELPtoBUY ------------------------------------------------ */
     .item .row.helptobuy { flex-direction: row; justify-content: center; }
     .item h2 { font-size: 18px; text-align: center; padding: 10px 25px; }
-    .toggle-helptobuy { display: flex; margin-top: 20px; position: unset; justify-content: center; }
+    .toggle-helptobuy { display: flex; margin-top: 20px; position: inherit; justify-content: center; }
     .toggle-helptobuy span { font-size: 15px; font-weight: normal; }
     
     /*-- RESULTS ------------------------------------------------ */
@@ -272,6 +282,6 @@ form input::placeholder { color: var(--darkgrey);}
     .info .col { width: 100%; }
     
     /*-- EXCLUSIVE ------------------------------------------------ */
-    
+    .terms { text-align: center; }
 }
 
