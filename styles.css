@@ -137,7 +137,7 @@ form input::placeholder { color: var(--darkgrey);}
 .main .results .full-amount { position: relative; }
 .main .results .full-amount > .button,.results .mortgage > .button { position: absolute; right: 0; top: 30px; }
 .main .results .col.mortgage { display: inline-block; }
-.main .results .col .mortgage-group { display: inline-flex; position: relative; }
+.main .results .col .mortgage-group { display: inline-flex; position: relative; margin: 0 auto 15px auto; }
 .main .results .col .mortgage-group .logo img{ width: 100%; max-width: 60px;}
 .main .results .col .mortgage-group .amount { margin-left: 15px;}
 .main .results .col .btn-group{ display: flex;margin-top: 10px; }
@@ -236,7 +236,7 @@ form input::placeholder { color: var(--darkgrey);}
 .exclusive .col.form-phone { margin: 0 auto; width: 80%; }
 .exclusive .col.form-phone form { border: none; padding: 0; }
 .exclusive img { width: auto; }
-.terms { font-size: 12px; }
+.terms { font-size: 12px; line-height: 13px; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* MEDIA QUERIES - Mobile */
@@ -250,7 +250,7 @@ form input::placeholder { color: var(--darkgrey);}
     .item { margin-bottom: 0; }
     .item .row { flex-flow: column; }
     .item .col .title { margin: 0 auto; padding-right: 15%; }
-    .button { width: 100%; }
+    .button { width: 88%; }
     .main { margin-top: 0; }
     .anchor { visibility: hidden;}
     /*-- NAV ------------------------------------------------ */
