@@ -21,9 +21,20 @@
         });
     });
     </script>
-
+    <nav>
+        <div class="nav-wrapper">
+            <ul>
+                <li>QUICK LINKS</li>
+                <li><a class="active icon-homepound" href="#main">Result</a></li>
+                <li><a class="icon-home" href="#properties">Properties</a></li>
+                <li><a class="icon-handshake" href="#mortgage">Mortgage Deals</a></li>
+                <li><a class="icon-check" href="#exclusive">Exclusive Deals</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
     <!-- SECTION - MAIN RESULTS ---------------------------------------------------------------------------------------------------------------------------->
+    <div class="anchor" id="main"></div>
        <div class="item main">
             <div class="row header">
                 <div class="col title-group">
@@ -43,7 +54,7 @@
             </div>
             <div class="wrapper">
                 <!-- RESULTS - main ------------>
-                <div class="row results main">
+                <div class="row results">
                     <div class="col full-amount">
                         <div>
                             £385,000<span class="txt-norm-block-20 mobile-hide">on your new home*</span>
@@ -76,7 +87,7 @@
                 <div class="row results results help-to-buy">
                     <div class="col full-amount">
                         <div>
-                            £410,000<span class="txt-norm-block-20 mobile-hide">on your new home*</span>
+                            £410,000<span class="txt-norm-block-20 mobile-hide">with an equity loan*</span>
                         </div>
                         <button class="button btn-more btn-green btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
                         <div class="btn-group mobile-hide">
@@ -143,6 +154,7 @@
         </div>
         
         <!-- SECTION - PROPERTIES ---------------------------------------------------------------------------------------------------------------------------->
+        <div class="anchor" id="properties"></div>
         <div class="item properties">
             <div class="row header">
                 <div class="col title-group">
@@ -250,7 +262,7 @@
                         </a>
                     </div>
                     <div class="col">
-                        <img src="images/pdf.jpg" alt="">
+                        <img src="images/enquiry.jpg" alt="">
                         <a href="#" title="" ><div class="icon"><img src="images/icon-chat.svg" alt=""></div>
                             <span><strong>Any questions?</strong> Speak to the Barratt Homes team</span>
                             <i class="arrow"></i>
@@ -260,6 +272,7 @@
             </div>
         </div>
         <!-- SECTION - MORTGAGE ---------------------------------------------------------------------------------------------------------------------------->
+        <div class="anchor" id="mortgage"></div>
         <div class="item mortgage">
             <div class="row header">
                 <div class="col title-group">
@@ -371,6 +384,7 @@
             </div>
         </div>
         <!-- SECTION - EXCLUSIVE ---------------------------------------------------------------------------------------------------------------------------->
+        <div class="anchor" id="exclusive"></div>
         <div class="item exclusive">
             <div class="row header">
                 <div class="col title-group">
@@ -397,21 +411,45 @@
             </div>    
         </div>
     </div>
+    
     <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+    // Nav Scroll to section
+    $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+                // Store hash
+                var hash = this.hash;
+                // Add smooth page scroll
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                    // Add hash (#) to URL
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+    </script>
+    <script>
+    // Dropdown 'Update Amounts' block
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
     }
-  });
-}
     </script>
 </body>
 </html>
