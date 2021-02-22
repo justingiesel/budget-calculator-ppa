@@ -243,6 +243,7 @@ form input::placeholder { color: var(--darkgrey);}
 /* MEDIA QUERIES - Mobile */
 /* ------------------------------------------------------------------------------------------------ */
 @media only screen and (max-width: 600px){
+    body { margin-bottom: 80%;}
     .mobile-hide { display: none !important; }
     .mobile-show { display: block !important; }
     .row.col-reverse-mobile{ flex-direction: column-reverse !important; }
@@ -285,6 +286,7 @@ form input::placeholder { color: var(--darkgrey);}
     .main .results .col:nth-of-type(2) { width: auto; margin: 0 auto; }
     .main .results .col:nth-of-type(2) .icon-divider { display: block; width: 135px; height: 35px; background-image: url('images/icon-divider-hori.svg'); }
     .main .col.mortgage { text-align: -moz-center; }
+    .main .mortgage .button { width: 88%; }
     .main .results .button.icon-home { background-color: var(--blue); color: white; border:none; padding: 14px 10px; }
     .main .results .button.btn-icon-left::before { top: 27%; }
     .main .results .button.icon-home::before { filter: opacity(1);}
