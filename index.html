@@ -5,22 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" class="style">
-    <script
-			  src="https://code.jquery.com/jquery-3.5.1.min.js"
-			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-			  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-    <script>
-    $(document).ready(function() {    
-        $(".btn-helptobuy-toggle").click(function(){
-            $(".results.help-to-buy").toggleClass("active");
-            $(".results.main-amount").toggleClass("hidden");
-            $(".btn-toggle").toggleClass("active");
-            // $(".btn-more").toggleClass(".btn-helptobuy");
-        });
-    });
-    </script>
     <nav>
         <div class="nav-wrapper">
             <ul>
@@ -33,9 +20,9 @@
         </div>
     </nav>
     <div class="container">
-    <!-- SECTION - MAIN RESULTS ---------------------------------------------------------------------------------------------------------------------------->
-    <div class="anchor" id="main"></div>
-       <div class="item main">
+        <!-- SECTION - MAIN RESULTS ---------------------------------------------------------------------------------------------------------------------------->
+        <div class="item main">
+            <div class="anchor" id="main"></div>
             <div class="row header">
                 <div class="col title-group">
                     <div class="icon"><img src="images/icon-home-pound.svg" alt=""></div>
@@ -154,8 +141,9 @@
         </div>
         
         <!-- SECTION - PROPERTIES ---------------------------------------------------------------------------------------------------------------------------->
-        <div class="anchor" id="properties"></div>
+        
         <div class="item properties">
+            <div class="anchor" id="properties"></div>
             <div class="row header">
                 <div class="col title-group">
                     <div class="icon"><img src="images/icon-home.svg" alt=""></div>
@@ -272,8 +260,8 @@
             </div>
         </div>
         <!-- SECTION - MORTGAGE ---------------------------------------------------------------------------------------------------------------------------->
-        <div class="anchor" id="mortgage"></div>
         <div class="item mortgage">
+            <div class="anchor" id="mortgage"></div>
             <div class="row header">
                 <div class="col title-group">
                     <div class="icon"><img src="images/icon-handshake.svg" alt=""></div>
@@ -295,7 +283,7 @@
             </div>
             <div class="wrapper add-bg-color">
                 <div class="row">
-                    <div class="col">
+                    <div class="col main-amount">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
                         <div class="details">
                             <img src="images/logo-mortgage.png">
@@ -307,7 +295,7 @@
                         </div>
                         <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
                     </div>
-                    <div class="col helptobuy">
+                    <div class="col helptobuy help-to-buy">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
                         <div class="details">
                             <img src="images/icon-helptobuy.png">
@@ -323,7 +311,7 @@
             </div>
             <div class="wrapper">
                 <div class="row">
-                    <div class="col">
+                    <div class="col main-amount">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
                         <div class="details">
                             <img src="images/logo-mortgage.png">
@@ -335,7 +323,7 @@
                         </div>
                         <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
                     </div>
-                    <div class="col helptobuy">
+                    <div class="col helptobuy help-to-buy">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
                         <div class="details">
                             <img src="images/icon-helptobuy.png">
@@ -351,7 +339,7 @@
             </div>
             <div class="wrapper add-bg-color">
                 <div class="row">
-                    <div class="col">
+                    <div class="col main-amount">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
                         <div class="details">
                             <img src="images/logo-mortgage.png">
@@ -363,7 +351,7 @@
                         </div>
                         <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
                     </div>
-                    <div class="col helptobuy">
+                    <div class="col helptobuy help-to-buy">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
                         <div class="details">
                             <img src="images/icon-helptobuy.png">
@@ -384,8 +372,8 @@
             </div>
         </div>
         <!-- SECTION - EXCLUSIVE ---------------------------------------------------------------------------------------------------------------------------->
-        <div class="anchor" id="exclusive"></div>
         <div class="item exclusive">
+            <div class="anchor" id="exclusive"></div>
             <div class="row header">
                 <div class="col title-group">
                     <div class="icon"><img src="images/icon-check.svg" alt=""></div>
@@ -411,26 +399,32 @@
             </div>    
         </div>
     </div>
-    
+    <script>
+        // Nav Scroll to anchors
+        $(document).ready(function() {    
+            $(".btn-helptobuy-toggle").click(function(){
+                $(".help-to-buy").toggleClass("active");
+                $(".main-amount").toggleClass("hidden");
+                $(".btn-toggle").toggleClass("active");
+            });
+        });
+        </script>
     <script>
     // Nav Scroll to section
     $(document).ready(function(){
-        // Add smooth scrolling to all links
         $("a").on('click', function(event) {
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
                 // Prevent default anchor click behavior
                 event.preventDefault();
-                // Store hash
                 var hash = this.hash;
                 // Add smooth page scroll
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
                     }, 800, function(){
-                    // Add hash (#) to URL
                     window.location.hash = hash;
                 });
-            } // End if
+            } 
         });
     });
     </script>
