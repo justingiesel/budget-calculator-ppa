@@ -304,7 +304,7 @@ form input::placeholder { color: var(--darkgrey);}
     .main .results { gap: 15px;}
     .main .item h2 span { font-size: 20px; font-weight: normal; line-height: 18px; }
     .main .full-amount{ text-align: center; }
-    .main .full-amount, .mortgage-group { margin-bottom: 15px; }
+    .main .full-amount, .mortgage-group { display: block !important; }
     .main .results .btn-group { justify-content: center; }
     .main .results .col:nth-of-type(2) { width: auto; margin: 0 auto; }
     .main .results .col:nth-of-type(2) .icon-divider { display: block; width: 135px; height: 35px; background-image: url('images/icon-divider-hori.svg'); }
@@ -353,7 +353,7 @@ form input::placeholder { color: var(--darkgrey);}
     .exclusive .form-optin.two-input .form-group { width: 100% !important; }
 
     /*-- SEARCH ------------------------------------------------ */
-    .search-home h2 { width: 100%; font-size: 20px; line-height: 2rem; }
+    .search-home h2 { width: 100%; font-size: 20px; line-height: 1.8rem; }
     .search-home .button { float: none; margin: 0 auto; }
 }
 
