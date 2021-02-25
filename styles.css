@@ -16,6 +16,7 @@
     --blue: #2089C5;
     --darkblue: #1C7CAE;
     --green: #189997;
+    --theme: var(--dark);
 }
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; letter-spacing: 0.3px; }
 body { background-color: #F5F5F5; color: var(--dark); font-family: 'Omnes', Arial, Helvetica, sans-serif; margin: 0 0 50% 0;}
@@ -91,7 +92,7 @@ box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.1);}
 .btn-icon-right:hover::before{ right: 8px;  }
 
 /*-- NAV  ------------------------------------------------ */
-nav { width: 100%; background-color: var(--dark); position: fixed; z-index: 99; }
+nav { width: 100%; background-color: var(--theme); position: fixed; z-index: 99; }
 nav .nav-wrapper { margin: 0 auto; width: 100%; max-width: 880px; display: block; }
 nav ul { display: flex;}
 nav li:first-of-type { align-self: center; color: var(--grey); padding: 10px; }
@@ -104,15 +105,37 @@ nav li:not(:first-of-type):hover { background-color: var(--darkgrey); }
 nav li:not(:first-of-type):hover::after { border: none; }
 .anchor { position: absolute; margin-top: -50px; }
 
-/*-- forms  ------------------------------------------------ */
-.form-phone input.input-grey { border: 1px solid #DCDCDC; border-radius: 4px; background-color: #F6F6F6; width: 100%; padding: 10px 20px; }
-.form-phone input.input-white { border: 1px solid #DCDCDC; border-radius: 4px; background-color: white; width: 100%; padding: 10px 20px; }
+/*-- FORM ------------------------------------------------ */
+.form-optin { width: 60%; display: flex; padding: 25px; box-sizing: border-box; width: 100%; flex-wrap: wrap; gap: 7px; }
+.form-optin input.input-grey { border: 1px solid #DCDCDC; border-radius: 4px; background-color: #F6F6F6; width: 100%; padding: 10px 20px; }
+.form-optin input.input-white { border: 1px solid #DCDCDC; border-radius: 4px; background-color: white; width: 100%; padding: 10px 20px; }
 form input::placeholder { color: var(--darkgrey);}
-.col.form-phone { width: 60%; }
-.col.form-phone .button { width: 70%; }
+.form-optin h3 span.txt-shrink { font-size: 90%; font-weight: normal; }
+.form-optin h3 { margin-top: 0; width: 100%; }
+.form-optin .col.form-optin label { display: block; font-size: 14px; }
+.form-optin .form-group { display: inline-flex; gap: 10px; vertical-align: top; width: 100%; }
+.form-optin.add-icon .form-group { width: 80% !important; }
+.form-optin img { width: auto; height: max-content; margin: 0 5px; }
+.form-optin .button { width: 100%; }
+.form-optin.two-input { display: flex; flex-wrap: wrap; flex-direction: row; }
+.form-optin.two-input .form-group{ display: flex; flex-direction: column; width: 49% !important; }
+.main .form-optin { max-width: 480px; border: 1px solid var(--lightgrey); border-radius: 10px; }
+.main .form-optin .form-group { width: 88%; }
+.properties .form-optin { margin: 10px auto 50px auto; width: 85%; border: none; background-color: #F5F5F5; padding: 30px 50px 40px 80px; position: relative;  border-radius: 10px;}
+.properties .form-optin::before { content: ""; position: absolute; left:-23px; top: -18px; display: block; background-image: url('images/icon-check-lg.svg'); width: 110px; height:85px; background-repeat: no-repeat; background-size: 110px; }
+.exclusive .form-optin .form-group { width: 92%;}
+.select { position: relative; }    
+.select select { padding: 10px 15px; outline: 0; border: 0px solid var(--dark); border-radius: 4px; background: var(--white); color: var(--darkgrey); appearance: none; -webkit-appearance: none; -moz-appearance: none; }
+.select select::-ms-expand { display: none; }
+.select select:hover,.select select:focus { color: var(--dark);background: var(--white); }
+.select select:disabled { opacity: 0.5; pointer-events: none; }
+.select_arrow { position: absolute; top: 16px; right: 15px; width: 0px; height: 0px; border: solid #7b7b7b; border-width: 0 1px 1px 0; display: inline-block; padding: 3px; transform: rotate(45deg); -webkit-transform: rotate(45deg); }
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow { border-color: #000000; }
+.select select:disabled ~ .select_arrow { border-top-color: #cccccc; }
 
 /*-- HEADER ------------------------------------------------ */
-.item .col .icon { display: flex; justify-content: center; background: var(--dark); width: 84px; height: 84px; border-radius: 0 0 8px 0; }
+.item .col .icon { display: flex; justify-content: center; background: var(--theme); width: 84px; height: 84px; border-radius: 0 0 8px 0; }
 .item .header .col .title { display: none; }
 .item .header .col.title-group img { width: 36px; }
 .item .header h2 { padding: 0 30px; margin-top: 25px; }
@@ -150,12 +173,6 @@ form input::placeholder { color: var(--darkgrey);}
 .main .results.help-to-buy { color: var(--green);}
 .main .results .btn-helptobuy { background-color: var(--green) !important; }
 
-/*-- MAIN - Form-phone ------------------------------------------------ */
-.form-phone form { display: block; padding: 25px; box-sizing: border-box; border: 1px solid var(--lightgrey); border-radius: 10px;width: 100%; }
-.form-phone h3 span.txt-shrink { font-size: 90%; font-weight: normal; }
-.form-phone h3 { margin-top: 0; }
-.form-phone .form-group { display: inline-flex; gap: 10px; margin-left: 5px; vertical-align: top; width: 90%; }
-
 /*-- MAIN - Update amounts  ------------------------------------------------ */
 .update-amounts .row { justify-content: space-between; margin-bottom: 0 !important;}
 .update-amounts .col { margin: 8px; }
@@ -186,12 +203,6 @@ form input::placeholder { color: var(--darkgrey);}
 .properties .prop .beds::before { background-image: url('images/icon-bed.svg'); content: ""; width: 24px; height: 16px; display: inline-block; margin-right: 5px; }
 .properties .prop .brand img { width: 100%; max-width: 176px; height: 100%; max-height: 195px; }
 .properties .col.brand { width: 30%; text-align: right; }
-.properties .form-phone { margin-bottom: 40px;}
-.properties .form-phone form { margin: 0 auto; width: 75%; border: none; background-color: #F5F5F5; padding: 30px 50px 40px 80px; position: relative;}
-.properties .form-phone form::before { content: ""; position: absolute; left:-23px; top: -18px; display: block; background-image: url('images/icon-check-lg.svg'); width: 110px; height:85px; background-repeat: no-repeat; background-size: 110px; }
-.properties .col.form-phone { width: 100%; }
-.properties .col.form-phone label { display: block; font-size: 14px; }
-.properties .form-phone .form-group { width: 100%; margin-left: 0; margin-top: 4px; }
 .properties h3 { font-size: 26px; line-height: 30px; }
 
 /*-- INFO ------------------------------------------------ */
@@ -291,17 +302,17 @@ form input::placeholder { color: var(--darkgrey);}
     .main .results .button.btn-icon-left::before { top: 27%; }
     .main .results .button.icon-home::before { filter: opacity(1);}
     .main h3 span { display: unset; }
+    .main .form-optin .form-group { width: 83% !important; }
 
-    /*-- FORM Telephone ------------------------------------------------ */
-    .form-phone .form-group { display: inline-block; }
-    .form-phone .form-group:first-of-type { width: 13%; }
-    .form-phone .form-group:last-of-type { width: 85%;}
-    .form-phone input { width: 100%; margin-bottom: 5px; }
-    .col.form-phone, .col.form-phone .button { width: 100%; text-align: center;}
+    /*-- FORM Opt-in ------------------------------------------------ */
+    .form-optin .form-group { width: 100% !important; flex-direction: column; }
+    .form-optin.two-input .form-group { width: 100% !important; }
+    form h3 { text-align: center; }
     
     /*-- UPDATE AMOUNTS ------------------------------------------------ */
-    .update-amounts { margin-bottom: 20px;;}
+    .update-amounts { margin-bottom: 20px; }
     .update-amounts .row { flex-flow: row; }
+    .update-amounts .button { width: 100%; }
 
     /*-- PROPERTIES ------------------------------------------------ */
     .properties .col.brand {display: none; }
@@ -309,11 +320,10 @@ form input::placeholder { color: var(--darkgrey);}
     .properties .prop .col { width: 100%; }
     .properties .prop img { width: 100%; height: 100%; max-height: 195px; }
     .properties h3 { font-size: 18px; line-height: 22px; text-align: center; }
-    .properties .form-phone { margin-bottom: 10px; }
-    .properties .form-phone form { width: 100%; border-radius: 0; padding: 50px 40px 40px; }
-    .properties .form-phone form label { display: none !important; }
-    .properties .form-phone .form-group:last-of-type { width: 100%; }
-    .properties .form-phone form::before { left: 40%; top: -21px; width: 90px; height: 69px; background-size: 78px; }
+    .properties .form-optin { width: 100%; border-radius: 0; padding: 50px 40px 40px; margin: 20px auto 40px auto; }
+    .properties .form-optin label { display: none !important; }
+    .properties .form-optin .form-group:last-of-type { width: 100%; }
+    .properties .form-optin::before { left: 40%; top: -21px; width: 90px; height: 69px; background-size: 78px; }
     
     /*-- MORTGAGE ------------------------------------------------ */
     .mortgage div:nth-of-type(3) { display: none; }
@@ -331,5 +341,7 @@ form input::placeholder { color: var(--darkgrey);}
     
     /*-- EXCLUSIVE ------------------------------------------------ */
     .terms { text-align: center; }
+    .exclusive .form-optin .form-group { width: 83% !important; }
+    .exclusive .form-optin.two-input .form-group { width: 100% !important; }
 }
 

@@ -20,7 +20,9 @@
         </div>
     </nav>
     <div class="container">
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!-- SECTION - MAIN RESULTS ---------------------------------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="item main">
             <div class="anchor" id="main"></div>
             <div class="row header">
@@ -46,7 +48,7 @@
                         <div>
                             £385,000<span class="txt-norm-block-20 mobile-hide">on your new home*</span>
                         </div>
-                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Discuss your options</button>
                         <div class="btn-group mobile-hide">
                             <button class="button btn-white btn-icon btn-icon--med icon-home btn-icon-left">See homes that match your budget</button>
                         </div>
@@ -63,7 +65,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Find out more</button>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right mobile-hide">Free mortgage advice</button>
                         <div class="btn-group">
                             <button class="button btn-white btn-icon btn-icon--med icon-home btn-icon-left desktop-hide mobile-show ">See homes that match your budget</button>
                             <button class="button btn-white btn-icon btn-icon--med icon-handshake btn-icon-left mobile-hide">View more mortgage deals here</button>
@@ -101,18 +103,30 @@
                     </div>
                 </div>
                 <div class="row col-reverse-mobile flex-gap-20">
-                    <div class="col form-phone">
-                        <form action="">
+                    <div class="col">
+                        <!-- FORM - Tel -->
+                        <form action="" class="form-optin">
                             <h3><strong>We've got easy ways to help you move home</strong>,<span> just enter your telephone number to find out more:</span></h3>
                             <img src="images/icon-phone.svg" width="31" height="42" alt="">
-                            <div class="form-group">
+                            <div class="form-group"></form> 
                                 <input class="input-grey" type="input" placeholder="Telephone number" name="" id="" required>
                                 <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
                             </div>
                         </form>
+                        <!-- FORM - Name + Tel -->
+                        <form action="" class="form-optin two-input">
+                            <h3>John, don't miss out on <strong>exclusive instant updates and discounts</strong> for these properties</h3>
+                            <div class="form-group">
+                                <input class="input-grey" type="input" placeholder="Name" name="" id="" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="input-grey    " type="input" placeholder="Telephone number" name="" id="" required>
+                            </div>
+                            <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                        </form>
                     </div>
                     <div class="col update-amounts">
-                        <button type="button" id="update-btn" class="collapsible button btn-icon btn-icon--med icon-edit icon-arrow-dark btn-icon-left btn-icon-right">Update your amounts:</button>
+                        <button type="button" id="update-btn" class="collapsible button btn-icon btn-icon--med icon-edit icon-arrow-dark btn-icon-left btn-icon-right">Change your calculation:</button>
                         <div class="content">
                             <form action="">
                                 <div class="row">
@@ -128,7 +142,7 @@
                                     <div class="col">
                                         <div class="circle">OR</div>
                                     </div>
-                                    <div class="col align-btm"><button class="button btn-grey btn-icon btn-icon--small icon-arrow btn-icon-right">Find out more</button></div>
+                                    <div class="col align-btm"><button class="button btn-grey btn-icon btn-icon--small icon-arrow btn-icon-right">Amend your calculation</button></div>
                                 </div>
                             </form>
                         </div>
@@ -139,9 +153,9 @@
                 </div>
             </div>
         </div>
-        
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!-- SECTION - PROPERTIES ---------------------------------------------------------------------------------------------------------------------------->
-        
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="item properties">
             <div class="anchor" id="properties"></div>
             <div class="row header">
@@ -190,18 +204,63 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="col form-phone">
-                <form action="">
-                    <div class="form-wrapper">
+            <div class="row">
+                <div class="col">
+                    <!-- FORM - Tel -->
+                    <form action="" class="form-optin">
+                            <h3>John, don't miss out on <strong>exclusive instant updates and discounts</strong> for these properties</h3>
+                            <label>Telephone Number:</label>
+                            <div class="form-group">
+                                <input class="input-white" type="input" placeholder="Telephone number" name="" id="" required>
+                                <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                            </div>
+                    </form>
+                    <!-- FORM - Name + Tel -->
+                    <form action="" class="form-optin two-input">
                         <h3>John, don't miss out on <strong>exclusive instant updates and discounts</strong> for these properties</h3>
-                        <label>Telephone Number:</label>
                         <div class="form-group">
-                            <input class="input-white" type="input" placeholder="Telephone number" name="" id="" required>
-                            <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                            <label>Name:</label>
+                            <input class="input-white" type="input" placeholder="Name" name="" id="" required>
                         </div>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <label>Telephone Number:</label>
+                            <input class="input-white" type="input" placeholder="Telephone number" name="" id="" required>
+                        </div>
+                        <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                    </form>
+                    <!-- FORM - Date + Time -->
+                    <form action="" class="form-optin two-input">
+                        <h3>John, Do you have any questions about your next dream home?</h3>
+                        <label>Select a day & time to speak to discuss your options.</label>
+                        <div class="form-group select">
+                            <!-- <label>Day:</label> -->
+                            <select name="" id="car">
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                            </select>
+                            <div class="select_arrow"></div>
+                        </div>
+                        <div class="form-group select">
+                            <!-- <label>Time:</label> -->
+                            <select name="" id="">
+                                <option value="9am">9am</option>
+                                <option value="10am">10am</option>
+                                <option value="11am">11am</option>
+                                <option value="12pm">12pm</option>
+                                <option value="1pm">1pm</option>
+                                <option value="2pm">2pm</option>
+                                <option value="3pm">3pm</option>
+                                <option value="4pm">4pm</option>
+                                <option value="5pm">5pm</option>
+                            </select>
+                            <div class="select_arrow"></div>
+                        </div>
+                        <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                    </form>
+                </div>
             </div>
             <div class="wrapper">
                 <div class="row prop">
@@ -238,7 +297,9 @@
                 </div>
             </div>
         </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!-- SECTION - INFO ---------------------------------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="item info">
             <div class="wrapper">
                 <div class="row">
@@ -259,7 +320,9 @@
                 </div>
             </div>
         </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!-- SECTION - MORTGAGE ---------------------------------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="item mortgage">
             <div class="anchor" id="mortgage"></div>
             <div class="row header">
@@ -293,7 +356,7 @@
                                 <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
                             </ul>
                         </div>
-                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire Now</button>
                     </div>
                     <div class="col helptobuy help-to-buy">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
@@ -305,7 +368,7 @@
                                 <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
                             </ul>
                         </div>
-                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
+                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire Now</button>
                     </div>
                 </div>
             </div>
@@ -321,7 +384,7 @@
                                 <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
                             </ul>
                         </div>
-                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire Now</button>
                     </div>
                     <div class="col helptobuy help-to-buy">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
@@ -333,7 +396,7 @@
                                 <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
                             </ul>
                         </div>
-                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
+                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire Now</button>
                     </div>
                 </div>
             </div>
@@ -349,7 +412,7 @@
                                 <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
                             </ul>
                         </div>
-                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
+                        <button class="button btn-blue btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire Now</button>
                     </div>
                     <div class="col helptobuy help-to-buy">
                         <div class="head"><span class="amount">£725</span> p/m*<span class="spacer"></span>Fixed for 2 years</div>
@@ -361,7 +424,7 @@
                                 <li>1.49% (Fixed) for 24 months; Thereafter 4.24% (Standard Mortgage);</li>
                             </ul>
                         </div>
-                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire</button>
+                        <button class="button btn-green btn-icon btn-icon--small icon-arrow btn-icon-right">Enquire Now</button>
                     </div>
                 </div>
             </div>
@@ -371,7 +434,9 @@
                 </div>
             </div>
         </div>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <!-- SECTION - EXCLUSIVE ---------------------------------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="item exclusive">
             <div class="anchor" id="exclusive"></div>
             <div class="row header">
@@ -380,19 +445,33 @@
                     <div class="title">Exclusive Deals</div>
                 </div>
                 <div class="col">
-                    <h2><span class="txt-block-26"><strong>John, don't miss out on <i>exclusive</i> instant updates and discounts for these properties</strong></h2>        
+                    <h2><span class="txt-block-26"><strong>John, be first to know about exclusive discounts on your next dream home from “Developer name” </strong></h2>        
                 </div>
             </div>
             <div class="wrapper">
                 <div class="row helptobuy">
-                    <div class="col form-phone">
-                        <form action="">
-                            <h3>Enter your telephone number to find out more:</h3>
+                    <div class="col">
+                        <!-- FORM - Tel -->
+                        <form action="" class="form-optin">
+                            <h3>Enter your telephone number for instant updates:</h3>
                             <img src="images/icon-phone.svg" width="32" height="42" alt="">
                             <div class="form-group">
                                 <input class="input-grey" type="input" placeholder="Telephone number" name="" id="" required>
-                                <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
+                                <button type="submit" class="button btn-med btn-darkblue">Get discounts</button>
                             </div>
+                        </form>
+                        <!-- FORM - Name + Tel -->
+                        <form action="" class="form-optin two-input">
+                            <h3>John, don't miss out on <strong>exclusive instant updates and discounts</strong> for these properties</h3>
+                            <div class="form-group">
+                                <!-- <label>Telephone Number:</label> -->
+                                <input class="input-grey" type="input" placeholder="Name" name="" id="" required>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label>Telephone Number:</label> -->
+                                <input class="input-grey" type="input" placeholder="Telephone number" name="" id="" required>
+                            </div>
+                            <button type="submit" class="button btn-med btn-darkblue">Send me updates</button>
                         </form>
                     </div>
                 </div>
@@ -429,7 +508,7 @@
     });
     </script>
     <script>
-    // Dropdown 'Update Amounts' block
+    // Dropdown 'Update Calculation' block
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
