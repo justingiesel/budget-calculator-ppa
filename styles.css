@@ -17,7 +17,10 @@
     --darkblue: #1C7CAE;
     --turqoise: #189997;
     --green: #1CAE86;
-    --theme: var(--dark); // optional for buttons
+    /* client branding -> buttons */
+    --theme: var(--dark);
+    /* client branding -> buttons */
+    --themebtn: var(--blue); 
 }
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; letter-spacing: 0.3px; }
 body { background-color: #F5F5F5; color: var(--dark); font-family: 'Omnes', Arial, Helvetica, sans-serif; margin: 0;}
@@ -61,15 +64,18 @@ box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.1);}
     border-radius: 4px;
     position: relative;
     font-size: 12px;
+    border: none; 
+    color: white;
 }
 .button:hover { opacity: 0.8; }
 .btn-med { padding: 12px; font-size: 14px;}
 .btn-lg { padding: 15px 60px; font-size: 16px;}
+.btn-color { background-color: var(--themebtn);  }
 .btn-white { background-color: white; color: var(--dark); border: 1px solid var(--grey); }
-.btn-blue { background-color: var(--blue); color: var(--white); border: none; }
-.btn-turqoise { background-color: var(--turqoise); color: var(--white); border: none; }
-.btn-darkblue { background-color: var(--darkblue); color: var(--white); border: none; }
-.btn-grey { background-color: var(--darkgrey); color: var(--white); border: none; }
+.btn-blue { background-color: var(--blue); }
+.btn-turqoise { background-color: var(--turqoise); }
+.btn-darkblue { background-color: var(--darkblue); }
+.btn-grey { background-color: var(--darkgrey); }
 .btn-icon::before, .btn-icon::after { content: ""; position: absolute; display: block; background-repeat: no-repeat;}
 .btn-icon--small::before{ background-size: 10px; width: 12px; height: 12px; }
 .btn-icon--med::before, .btn-icon--med::after{ background-size: 18px 20px; width: 30px; height: 20px; }
