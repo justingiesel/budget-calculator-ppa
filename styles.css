@@ -15,7 +15,8 @@
     --white: #ffffff;
     --blue: #2089C5;
     --darkblue: #1C7CAE;
-    --green: #189997;
+    --turqoise: #189997;
+    --green: #1CAE86;
     --theme: var(--dark); // optional for buttons
 }
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; letter-spacing: 0.3px; }
@@ -37,7 +38,7 @@ img { width: 100%; }
 .txt-block-26 { font-size: 26px; display: block;}
 .txt-norm-block-20 { font-size: 20px; font-weight: normal; display: block;}
 .txt-norm-block-14 { font-size: 14px; font-weight: normal; display: block;}
-.txt-green { color: var(--green); }
+.txt-turqoise { color: var(--turqoise); }
 
 /* Layout */
 .container { display: grid; margin: 0 auto; max-width: 100%; max-width: 880px; width: 100%; margin-bottom: 30px;  }
@@ -66,7 +67,7 @@ box-shadow: 0px 3px 6px -1px rgba(0,0,0,0.1);}
 .btn-lg { padding: 15px 60px; font-size: 16px;}
 .btn-white { background-color: white; color: var(--dark); border: 1px solid var(--grey); }
 .btn-blue { background-color: var(--blue); color: var(--white); border: none; }
-.btn-green { background-color: var(--green); color: var(--white); border: none; }
+.btn-turqoise { background-color: var(--turqoise); color: var(--white); border: none; }
 .btn-darkblue { background-color: var(--darkblue); color: var(--white); border: none; }
 .btn-grey { background-color: var(--darkgrey); color: var(--white); border: none; }
 .btn-icon::before, .btn-icon::after { content: ""; position: absolute; display: block; background-repeat: no-repeat;}
@@ -118,7 +119,7 @@ form input::placeholder { color: var(--darkgrey);}
 .form-optin.add-icon .form-group { width: 80% !important; }
 .form-optin img { width: auto; height: max-content; margin: 0 5px; }
 .form-optin .button { width: 100%; }
-.form-optin.two-input { display: flex; flex-wrap: wrap; flex-direction: row; }
+.form-optin.two-input { display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-around; }
 .form-optin.two-input .form-group{ display: flex; flex-direction: column; width: 49% !important; }
 .main .form-optin { max-width: 480px; border: 1px solid var(--lightgrey); border-radius: 10px; }
 .main .form-optin .form-group { width: 88%; }
@@ -136,6 +137,7 @@ form input::placeholder { color: var(--darkgrey);}
 .select select:disabled ~ .select_arrow { border-top-color: #cccccc; }
 .success { align-items: center; width: 100%; gap: 10px; }
 .success p { color: var(--green); font-size: 20px; }
+
 /*-- POP-UP MODAL ------------------------------------------------ */
 .modal { display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); }
 .modal-content { background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 100%; max-width: 700px; }
@@ -180,8 +182,8 @@ form input::placeholder { color: var(--darkgrey);}
 .main h3 span { font-size: 15px !important; font-weight: normal; display: block; }
 .main .results.help-to-buy { display: none !important; }
 .main .results.help-to-buy.active { display: flex !important; }
-.main .results.help-to-buy { color: var(--green);}
-.main .results .btn-helptobuy { background-color: var(--green) !important; }
+.main .results.help-to-buy { color: var(--turqoise);}
+.main .results .btn-helptobuy { background-color: var(--turqoise) !important; }
 
 /*-- MAIN - Update amounts  ------------------------------------------------ */
 .update-amounts .row { justify-content: space-between; margin-bottom: 0 !important;}
@@ -252,7 +254,7 @@ form input::placeholder { color: var(--darkgrey);}
 .mortgage .details { display: flex; }
 .mortgage .details img { max-width: 85px; height: 100%; }
 .mortgage button { width: max-content; align-self: end; }
-.mortgage .helptobuy .amount, .mortgage .helptobuy .full-amount { color: var(--green); border-color: var(--green); }
+.mortgage .helptobuy .amount, .mortgage .helptobuy .full-amount { color: var(--turqoise); border-color: var(--turqoise); }
 .mortgage .full-amount { border-bottom: 1px solid var(--dark); padding: 10px 0; margin-bottom: 20px; border-top: 1px solid var(--dark); }
 
 /*-- EXCLUSIVE ------------------------------------------------ */
@@ -275,6 +277,7 @@ form input::placeholder { color: var(--darkgrey);}
 /* ------------------------------------------------------------------------------------------------ */
 @media only screen and (max-width: 600px){
     body { margin-bottom: 80%;}
+    h3 { line-height: 26px; }
     .mobile-hide { display: none !important; }
     .mobile-show { display: block !important; }
     .row.col-reverse-mobile{ flex-direction: column-reverse !important; }
@@ -324,11 +327,16 @@ form input::placeholder { color: var(--darkgrey);}
     .main h3 span { display: unset; }
     .main .form-optin .form-group { width: 83% !important; }
 
-    /*-- FORM Opt-in ------------------------------------------------ */
+    /*-- FORM ------------------------------------------------ */
     .form-optin .form-group { width: 100% !important; flex-direction: column; }
     .form-optin.two-input .form-group { width: 100% !important; }
     form h3 { text-align: center; }
+    .success p { text-align: center; }
     
+    /*-- POP-UP MODAL ------------------------------------------------ */
+    .modal { padding-top: 5px; }
+    .modal .form-optin { padding: 25px 0 0 0; }
+
     /*-- UPDATE AMOUNTS ------------------------------------------------ */
     .update-amounts { margin-bottom: 20px; }
     .update-amounts .row { flex-flow: row; }
