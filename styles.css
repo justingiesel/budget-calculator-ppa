@@ -23,7 +23,7 @@
     --themebtn: var(--blue); 
 }
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; letter-spacing: 0.3px; }
-body { background-color: #F5F5F5; color: var(--dark); font-family: 'Omnes', Arial, Helvetica, sans-serif; margin: 0;}
+body { background-color: #F5F5F5; color: var(--dark); font-family: 'Omnes', Arial, Helvetica, sans-serif; margin: 0; }
 h2 { font-size: 20px; line-height: 27px; margin-bottom: 0; font-weight: normal; margin-top: 20px; }
 h3 { font-size: 19px; line-height: 23px; margin-bottom: 15px; font-weight: normal; }
 a { text-decoration: none; color: var(--dark); }
@@ -177,7 +177,7 @@ form label { margin-bottom: 5px; }
 .main .results .col{ display: block; width: 100%; font-weight: bold; }
 .main .results .col:first-of-type { font-size: 44px; line-height: 40px; }
 .main .results .col:nth-of-type(2) { width: 70px; padding: 0 20px; }
-.main .results .col:nth-of-type(2) .icon-divider { display: block; width: 35px; height: 88px; background-image: url('images/icon-divider-vert.svg');}
+.main .results .col:nth-of-type(2) .icon-divider { display: block; width: 35px; height: 88px; background-image: url('images/icon-divider-vert.svg'); font-family: 'Omnes', Arial, Helvetica, sans-serif; }
 .main .results .col:last-of-type { font-size: 32px; line-height: 30px; }
 .main .results .full-amount { position: relative; }
 .main .results .full-amount > .button,.results .mortgage > .button { position: absolute; right: -20px; top: 37px; }
@@ -213,7 +213,7 @@ form label { margin-bottom: 5px; }
 /*-- PROPERTIES ------------------------------------------------ */
 .properties .header { margin-bottom: 30px;}
 .properties .wrapper .row { justify-content: space-between; }
-.properties .prop .col { width: 31%; }
+.properties .prop .col { width: 31%; margin-bottom: 20px; }
 .properties .prop .details { position: relative; display: flex; flex-flow: column; }
 .properties .prop .details > div { margin: 5px 0 3px 0  ; }
 .properties .prop .button { width: 100%; text-align: left; }
@@ -229,7 +229,7 @@ form label { margin-bottom: 5px; }
 /*-- INFO ------------------------------------------------ */
 .info { padding-top: 40px; }
 .info .row { justify-content: space-between; gap: 20px; }
-.info .col { width: 47%; }
+.info .col { width: 47%; margin-bottom: 20px;}
 .info a { display: flex; font-size: 18px; margin-top: 10px; cursor: pointer; }
 .info a span { padding: 5px 15px; line-height: 24px; align-self: center; font-weight: normal; } 
 .info img { max-width: 373px; width: 100%; border: 1px solid var(--lightgrey); padding: 5px; }
@@ -251,8 +251,9 @@ form label { margin-bottom: 5px; }
 .mortgage .wrapper:last-of-type { padding: 15px 40px 40px; }
 .mortgage .wrapper.no-vert-pad { padding: 0 40px; }
 .mortgage .wrapper.add-bg-color { background-color: #F8F8F8; }
-.mortgage .wrapper .row { gap: 30px; }
+/* .mortgage .wrapper .row { gap: 30px; } */
 .mortgage .wrapper .row .col { width:49%; }
+.mortgage .wrapper .row .col:first-of-type { margin-right:30px; }
 .mortgage .wrapper .row:last-of-type .col { width:100%; }
 .mortgage .head { margin-bottom: 10px; }
 .mortgage .head span.amount { font-size: 30px; font-weight: bold; }
@@ -262,7 +263,7 @@ form label { margin-bottom: 5px; }
 .mortgage li { padding: 3px 2px; line-height: 17px; } 
 .mortgage .details { display: flex; }
 .mortgage .details img { max-width: 85px; height: 100%; }
-.mortgage .wrapper button { width: 40%; margin-top: 10px; align-self: end; }
+.mortgage .wrapper button { width: 40%; margin-top: 10px; align-self: flex-end !important; }
 .mortgage .helptobuy .amount, .mortgage .helptobuy .full-amount { color: var(--turqoise); border-color: var(--turqoise); }
 .mortgage .full-amount { border-bottom: 1px solid var(--dark); padding: 10px 0; margin-bottom: 20px; border-top: 1px solid var(--dark); }
 
@@ -321,12 +322,11 @@ form label { margin-bottom: 5px; }
     .toggle-helptobuy span { font-size: 15px; font-weight: normal; }
     
     /*-- RESULTS ------------------------------------------------ */
-    .main .results { gap: 15px;}
     .main .item h2 span { font-size: 20px; font-weight: normal; line-height: 18px; }
     .main .full-amount{ text-align: center; display: inline-flex; }
     .mortgage-group { display: inline-flex; width: auto; margin: 0 auto !important; }
     .main .results .btn-group { justify-content: center; }
-    .main .results .col:nth-of-type(2) { width: auto; margin: 0 auto; }
+    .main .results .col:nth-of-type(2) { width: auto; margin: 20px auto; }
     .main .results .col:nth-of-type(2) .icon-divider { display: block; width: 135px; height: 35px; background-image: url('images/icon-divider-hori.svg'); }
     .main .col.mortgage { text-align: center; width: 100%; }
     .main .mortgage .button { width: 88%; }
