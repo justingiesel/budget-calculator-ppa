@@ -114,14 +114,17 @@ nav li:not(:first-of-type):hover::after { border: none; }
 .anchor { position: absolute; margin-top: -50px; }
 
 /*-- FORM ------------------------------------------------ */
-.form-optin { width: 60%; display: flex; padding: 25px; box-sizing: border-box; width: 100%; flex-wrap: wrap; gap: 7px; }
+.form-optin { width: 60%; display: flex; padding: 25px; box-sizing: border-box; width: 100%; flex-wrap: wrap; }
+.form-optin input{ margin-right: 10px; }
+.form-optin input, .form-optin select, .form-optin .button { margin-bottom: 7px; }
 .form-optin input.input-grey { border: 1px solid #DCDCDC; border-radius: 4px; background-color: #F6F6F6; width: 100%; padding: 10px 20px; }
 .form-optin input.input-white { border: 1px solid #DCDCDC; border-radius: 4px; background-color: white; width: 100%; padding: 10px 20px; }
 form input::placeholder { color: var(--darkgrey);}
+form label { margin-bottom: 5px; }
 .form-optin h3 span.txt-shrink { font-size: 90%; font-weight: normal; }
 .form-optin h3 { margin-top: 0; width: 100%; }
-.form-optin .col.form-optin label { display: block; font-size: 14px; }
-.form-optin .form-group { display: inline-flex; gap: 10px; vertical-align: top; width: 100%; }
+.form-optin .displayFormFields { display: flex; justify-content: space-between; width: 100%; }
+.form-optin .form-group { display: inline-flex; vertical-align: top; width: 100%; }
 .form-optin.add-icon .form-group { width: 80% !important; }
 .form-optin img { width: auto; height: max-content; margin: 0 5px; }
 .form-optin .button { width: 100%; }
@@ -197,7 +200,7 @@ form input::placeholder { color: var(--darkgrey);}
 .update-amounts .collapsible { background-color: #eee; color: #444; cursor: pointer; padding: 18px 50px !important; width: 100%; border: none; text-align: center; outline: none; font-size: 15px; }
 .update-amounts .active, .update-amounts .collapsible:hover { background-color: #ccc; } 
 .update-amounts button.collapsible::before{ background-image: url('images/icon-edit.svg'); top: 10px; left: 15px; }
-.update-amounts button.collapsible::after{ filter: brightness(0);top: 22px; right: 15px; }
+.update-amounts button.collapsible::after{ filter: brightness(0);top: 18px; right: 15px; }
 .update-amounts .content { padding: 0; background-color: #F7F7F7; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; border-bottom-left-radius: ; }
 .update-amounts .content p { margin-bottom: 0;}
 .update-amounts .content form { padding: 0 20px 20px;}
@@ -227,8 +230,8 @@ form input::placeholder { color: var(--darkgrey);}
 .info { padding-top: 40px; }
 .info .row { justify-content: space-between; gap: 20px; }
 .info .col { width: 47%; }
-.info a { display: flex; gap: 10px; font-size: 18px; margin-top: 10px; cursor: pointer; }
-.info a span { padding: 5px; align-self: center; font-weight: normal; } 
+.info a { display: flex; font-size: 18px; margin-top: 10px; cursor: pointer; }
+.info a span { padding: 5px 15px; line-height: 24px; align-self: center; font-weight: normal; } 
 .info img { max-width: 373px; width: 100%; border: 1px solid var(--lightgrey); padding: 5px; }
 .info a img { border: none; padding: 0;}
 .info .col a .icon { width: 80px; height: 56px; padding: 12px; }
@@ -259,7 +262,7 @@ form input::placeholder { color: var(--darkgrey);}
 .mortgage li { padding: 3px 2px; line-height: 17px; } 
 .mortgage .details { display: flex; }
 .mortgage .details img { max-width: 85px; height: 100%; }
-.mortgage button { width: max-content; align-self: end; }
+.mortgage .wrapper button { width: 40%; margin-top: 10px; align-self: end; }
 .mortgage .helptobuy .amount, .mortgage .helptobuy .full-amount { color: var(--turqoise); border-color: var(--turqoise); }
 .mortgage .full-amount { border-bottom: 1px solid var(--dark); padding: 10px 0; margin-bottom: 20px; border-top: 1px solid var(--dark); }
 
@@ -336,6 +339,7 @@ form input::placeholder { color: var(--darkgrey);}
     /*-- FORM ------------------------------------------------ */
     .form-optin .form-group { width: 100% !important; flex-direction: column; }
     .form-optin.two-input .form-group { width: 100% !important; }
+    .form-optin .displayFormFields { flex-direction: column; }
     form h3 { text-align: center; }
     .success p { text-align: center; }
     
